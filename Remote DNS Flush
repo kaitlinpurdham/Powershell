@@ -1,0 +1,5 @@
+#Kaitlin Purdham 12/22/16
+
+$host.ui.RawUI.WindowTitle = "DNS Flush"
+$name = Read-Host -Prompt 'Computer name: '
+Invoke-Command $name -ScriptBlock {ipconfig/dnsflush}

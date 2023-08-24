@@ -1,0 +1,2 @@
+ import-module exchangeonlinemanagement
+ Get-TransportService | Get-MessageTrackingLog -Recipients <group name> -EventId RECEIVE -Source SMTP | Sort-Object Timestamp -Descending | select Timestamp,Sender,MessageSubject -First 1
